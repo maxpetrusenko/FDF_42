@@ -3,38 +3,34 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpetruse <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: max_p <max_p@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/20 20:56:57 by mpetruse          #+#    #+#             */
-/*   Updated: 2018/06/22 10:09:49 by mpetruse         ###   ########.fr       */
+/*   Updated: 2019/06/02 17:33:46 by max_p            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
-{
-	int neg;
-	int nb;
+#include "libft.h"
 
-	neg = 0;
-	nb = 0;
-	while (*str == ' ' || (*str >= 9 && *str <= 13))
-		str++;
-	if (*str == '+')
-		str++;
-	else if (*str == '-')
+int		ft_atoi(const char *str)
+{
+	int long	res;
+	int			neg;
+	const char	*s;
+
+	s = str;
+	while (*s && ft_isspace(*s))
+		s++;
+	neg = 1;
+	if (*s == '+' || *s == '-')
+		if (*s++ == '-')
+			neg = -1;
+	res = 0;
+	while (*s >= '0' && *s <= '9')
 	{
-		neg = -1;
-		str++;
+		res = res * 10 + neg * (*s++ - 48);
 	}
-	while (ft_isdigit(*str) && *str)
-	{
-		nb *= 10;
-		nb = nb + (*str++ - '0');
-	}
-	if (neg)
-		return (nb * neg);
-	else
-		return (nb);
+	return ((int)res);
 }

@@ -16,7 +16,7 @@ NAME = libft.a
 
 FLAGS = -Wall -Wextra -Werror -O2
 
-SOURCES = ./src/ft_*.c ./ft_printf/*.c
+SOURCES = ./src/*.c ./ft_printf/*.c
 
 INCLUDE = header
 

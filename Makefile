@@ -6,13 +6,13 @@
 #    By: max_p <max_p@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/08/09 21:22:02 by mpetruse          #+#    #+#              #
-#    Updated: 2019/04/12 20:50:06 by max_p            ###   ########.fr        #
+#    Updated: 2019/06/02 17:04:56 by max_p            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = fdf
 CC = gcc
-# CFLAGS = -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra -g
 SRC = main.c
 HEADERS = includes/fdf.h
 LIBFT = libft/libft.a
@@ -27,7 +27,7 @@ $(NAME) : $(LIBFT) $(MINILIBX) $(OBJ)
 		$(CC) $(CFLAGS) $(SRC) -o $(NAME) -I $(HEADERS) -L. $(LIBFT) -L ./minilibx -lmlx -framework OpenGL -framework AppKit
 
 $(OBJ): $(LIBFT)
-		$(CC) $(FLAGS) -c $(SRC)
+		$(CC) $(CFLAGS) -c $(SRC)
 $(LIBFT):
 		make libft
 $(MINILIBX):

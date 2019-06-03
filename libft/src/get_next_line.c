@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpetruse <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: max_p <max_p@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/12 22:23:56 by mpetruse          #+#    #+#             */
-/*   Updated: 2018/07/13 10:09:58 by mpetruse         ###   ########.fr       */
+/*   Updated: 2019/06/01 17:47:33 by max_p            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "libft.h"
 
 static	int	find_nl(int fd, char **buf, char **line)
 {

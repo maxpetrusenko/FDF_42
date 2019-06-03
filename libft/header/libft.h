@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpetruse <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: max_p <max_p@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/20 09:18:45 by mpetruse          #+#    #+#             */
-/*   Updated: 2018/08/10 13:07:44 by mpetruse         ###   ########.fr       */
+/*   Updated: 2019/06/02 17:35:07 by max_p            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -131,6 +131,7 @@ char				*ft_itoa_base_for_uint(unsigned long long value,
 					int base, char c);
 char				*ft_itoaf(uintmax_t n);
 char				*ft_get_binary(unsigned char octet);
+int					ft_isspace(char c);
 int					ft_wcharlen(wchar_t wc);
 
 int					get_next_line(const int fd, char **line);
