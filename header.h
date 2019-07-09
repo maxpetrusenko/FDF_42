@@ -48,5 +48,7 @@ void map_info(char *map, t_info *info);
 void		drawline(t_info *info, int one, int two, t_point *point);
 void connect_line(t_point *point, int i, t_info *info, int prev_x, int prev_y);
 void		connect_dots(t_info *info, t_point *point);
+void clean_all_stuff(t_point *point);
+int close_app(int key);
 
 #endif

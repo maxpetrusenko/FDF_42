@@ -12,8 +12,8 @@
 
 NAME = fdf
 CC = gcc
-CFLAGS = -Wall -Werror -Wextra -g
-SRC = main.c
+CFLAGS = -Wall -Werror -Wextra
+SRC = main.c help1.c
 HEADERS = includes/fdf.h
 LIBFT = libft/libft.a
 MINILIBX = minilibx/liblmx.a
